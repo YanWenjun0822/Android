@@ -1,0 +1,50 @@
+apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao'
+android {
+    compileSdkVersion 24
+    buildToolsVersion "24.0.1"
+    defaultConfig {
+        applicationId "com.app.weather"
+        minSdkVersion 15
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+}
+
+greendao {
+
+    targetGenDir 'src/main/java/dao'
+    schemaVersion 1
+}
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:24.2.1'
+    testCompile 'junit:junit:4.12'
+    compile 'com.google.code.gson:gson:2.8.0'
+    compile 'com.zhy:okhttputils:2.6.2'
+    compile 'com.orhanobut:logger:1.15'
+    compile 'com.android.support:design:25.0.1'
+    compile 'com.android.support:recyclerview-v7:24.0.0'
+    compile 'com.zhy:base-rvadapter:3.0.3'
+    compile 'org.greenrobot:greendao:3.2.0'
+    compile 'me.relex:circleindicator:1.2.2@aar'
+    compile 'com.miguelcatalan:materialsearchview:1.4.0'
+    compile 'org.greenrobot:eventbus:3.0.0'
+    compile files('libs/BaiduLBS_Android.jar')
+}

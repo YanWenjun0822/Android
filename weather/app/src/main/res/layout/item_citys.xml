@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="#ffffff"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+        <TextView
+            android:id="@+id/tv_city"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="长沙"
+            android:textSize="23sp"/>
+
+            <ImageView
+                android:id="@+id/iv_loction"
+                android:layout_marginLeft="5dp"
+                android:src="@mipmap/ic_location"
+                android:layout_width="15dp"
+                android:layout_height="15dp"/>
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/iv_weather"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="3dp"
+            android:src="@mipmap/ic_q"/>
+
+        <TextView
+            android:id="@+id/tv_weather"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="3dp"
+            android:text="多云"
+            android:textSize="12sp"
+            />
+        <TextView
+            android:id="@+id/tv_du"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_weight="1"
+            android:gravity="right|center"
+            android:paddingBottom="5dp"
+            android:paddingRight="10dp"
+            android:text="12°"
+            android:textSize="40sp"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="10dp"
+        android:background="#40c0c0c0"/>
+</LinearLayout>
